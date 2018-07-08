@@ -1,0 +1,1 @@
+Workers are a unique concept to InsurChain. They are proposals to provide services in return for a salary from the blockchain itself. A proposal should include a link to a website or forum thread that explains the purpose of the proposal.

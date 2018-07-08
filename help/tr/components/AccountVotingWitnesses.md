@@ -1,0 +1,1 @@
+[Taniklar](introduction/witness) Bitshares'in blok üreticileridirler. İşlemlerin geçerliliklerini teyit eder ve ağın güvenliğini sağlarlar. Dilediğiniz kadar tanığa oy verebilirsiniz, hepsi aynı miktarda alır. 

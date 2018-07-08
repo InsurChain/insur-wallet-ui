@@ -1,0 +1,1 @@
+Witnesses are the block producers of InsurChain. They validate transactions and ensure the safety of the network. You may vote for as many witnesses as you'd like, and they will all receive the same amount of votes. 
