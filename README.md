@@ -1,4 +1,4 @@
-Graphene-UI
+InsurChain-UI
 ============
 
 This is a light wallet that connects to a Graphene based API server such as the InsurChain *witness_node* executable.
@@ -7,7 +7,7 @@ It *stores all keys locally* in the browser, *never exposing your keys to anyone
 
 ### Getting started
 
-Graphene-UI depends node Node.js, and version 6+ is required. It has not yet been tested with v7.
+InsurChain-UI depends node Node.js, and version 6+ is required. It has not yet been tested with v7.
 
 On Ubuntu and OSX, the easiest way to install Node is to use the [Node Version Manager](https://github.com/creationix/nvm).
 
@@ -20,7 +20,7 @@ nvm use v6
 
 Once you have Node installed, you can clone the repo:
 ```
-git clone https://github.com/cryptonomex/graphene-ui.git
+git clone git@github.com:InsurChain/insur-wallet-ui.git
 cd graphene-ui
 ```
 
@@ -41,12 +41,6 @@ npm start
 
 Once the compilation is done the GUI will be available in your browser at: `localhost:8080` or `127.0.0.1:8080`. Hot Reloading is enabled so the browser will live update as you edit the source files.
 
-### Testnet
-By default graphene-ui connects to the live InsurChain network, but it's very easy to switch it to the testnet run by Xeroc. To do so, open the UI in a browser, go to Settings, then under Access, select the *Public Testnet Server* in the dropdown menu. You should also change the faucet if you need to create an account, the testnet faucet address is https://testnet.bitshares.eu. 
-
-The UI will reload and connect to the testnet, where you can use the faucet to create an account and receive an initial sum of test BTS.
-
-![image](https://cloud.githubusercontent.com/assets/6890015/22055747/f8e15e68-dd5c-11e6-84cd-692749b578d8.png)
 
 ## Production
 If you'd like to host your own wallet somewhere, you should create a production build and host it using NGINX or Apache. In order to create a prod bundle, simply run the following command:
@@ -59,23 +53,8 @@ This will create a bundle in the /dist folder that can be hosted with the web se
 We use Electron to provide installable wallets, available for Windows, OSX and Linux Debian platforms such as Ubuntu. First, install the required packages in the `electron` folder. Then go to the `web` folder and run `npm run electron`. This will compile the UI with some special modifications for use with Electron, and copy the result to the root `electron/build` folder. Now go back to the `electron` folder and run `npm run release` in order to build a wallet for your platform. 
 
 ## Contributing
-Graphene-UI is open source and anyone is free to contribute. PR's are welcomed and will be reviewed in a timely manner, and long-term contributors will be given access to the repo.
+InsurChain-UI is open source and anyone is free to contribute,and it is based on Graphene-UI.
 
-If you would like to get involved, we have a Slack channel where you can ask questions and get help.
-
-For more info, please contact one of the following people:
-
-- fabian@bitshares.org
-- cass@bitshares.org
-- bitsharesblocks@gmail.com
-- valentine@cryptonomex.com
-
-There's also a very active [Telegram chatroom](https://web.telegram.org/#/im?p=g33416306)
-
-## Development process
-
-- Bugs are always worked before enhancements
-- Developers should work each issue according to a numbered branch corresponding to the issue `git checkout -b 123`
 
 ### Coding style guideline
 
