@@ -5,6 +5,7 @@ import BindToChainState from "../Utility/BindToChainState";
 import ChainTypes from "../Utility/ChainTypes";
 import PrivateKeyStore from "stores/PrivateKeyStore";
 import WalletDb from "stores/WalletDb.js";
+import utils from "common/utils";
 import WalletUnlockActions from "../../actions/WalletUnlockActions";
 import {ChainStore, Aes,FetchChainObjects} from "graphenejs-lib/es";
 const ipfsFile = require('../../api/ipfsFile');
@@ -44,20 +45,23 @@ class GetAllInsurListData extends React.Component {
     componentWillReceiveProps (nextProps) {
     }
     shouldComponentUpdate (nextProps,nextState) {
-      
-      var source = this.props.source+this.props.account.name;
-      let _this=this;
-      $.get(source,function (data) {
-            if(data.result =="success")
-            {
-              _this.setState(
-                {ipfsHashListData: data.data});
-            }
-            else{
-            //alert(data.message)
-            }
-            });
-        return true;
+      if (!utils.are_equal_shallow(nextProps, this.props)  )
+      {
+          var source = this.props.source+this.props.account.name;
+          let _this=this;
+          $.get(source,function (data) {
+                if(data.result =="success")
+                {
+                  _this.setState(
+                    {ipfsHashListData: data.data});
+                }
+                else{
+                //alert(data.message)
+                }
+                });
+       }
+      return true;
+       
     }
     componentWillUpdate (nextProps,nextState) {
     }

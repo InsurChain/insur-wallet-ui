@@ -324,8 +324,7 @@ class ProposedOperation extends React.Component {
                         <TranslateWithLinks
                             string="proposal.upload_hash"
                             keys={[
-                                {type: "from", value: op[1].from, arg: "account"},
-                                {type: "file_name", value: op[1].file_name, arg: "file_name"},
+                                {type: "from", value: op[1].from, arg: "account"}
                               
                             ]}
                         />

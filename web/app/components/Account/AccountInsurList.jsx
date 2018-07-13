@@ -29,7 +29,7 @@ class AccountInsurList extends React.Component {
         super(props);
         console.log(this.props)  
         this.state = {
-            transaction_id: ""
+            transaction_id: null
         };
     }
      shouldComponentUpdate(nextProps) {
